@@ -44,6 +44,46 @@
 				"panel": "shared"
 			},
 			"problemMatcher": []
+		},
+		{
+			"label": "build-demo-net9",
+			"type": "shell",
+			"command": "dotnet",
+			"args": [
+				"build",
+				"--framework",
+				"net9.0",
+				"--verbosity",
+				"quiet"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/demo"
+			},
+			"group": "build",
+			"presentation": {
+				"reveal": "silent"
+			},
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "build-demo-net6",
+			"type": "shell",
+			"command": "dotnet",
+			"args": [
+				"build",
+				"--framework",
+				"net6.0",
+				"--verbosity",
+				"quiet"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/demo"
+			},
+			"group": "build",
+			"presentation": {
+				"reveal": "silent"
+			},
+			"problemMatcher": "$msCompile"
 		}
 	]
 }

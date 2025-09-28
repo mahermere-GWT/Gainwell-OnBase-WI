@@ -5,6 +5,10 @@
       "path": "./bulkDURLoader"
     },
     {
+      "name": "Demo Application",
+      "path": "./demo"
+    },
+    {
       "name": "Workspace Root",
       "path": "."
     }

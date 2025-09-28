@@ -40,21 +40,21 @@ namespace Demo
 
                 // Step 2: Begin logging to file
                 Console.WriteLine("\n2. Setting up logging system...");
-                
+
                 // Ensure log directory exists
                 var logDirectory = Path.Combine(Directory.GetCurrentDirectory(), appSettings.LogDirectory);
                 if (!Directory.Exists(logDirectory))
                 {
                     Directory.CreateDirectory(logDirectory);
                     Console.WriteLine($"Created log directory: {logDirectory}");
-                
-                // Configure Serilog
-                var logFilePath = Path.Combine(logDirectory, $"demo-{DateTime.Now:yyyyMMdd}.log");
-                Log.Logger = new LoggerConfiguration()
-                    .MinimumLevel.Information()
-                    .WriteTo.Console()
-                    .WriteTo.File(logFilePath, rollingInterval: RollingInterval.Day)
-                    .CreateLogger();
+
+                    // Configure Serilog
+                    var logFilePath = Path.Combine(logDirectory, $"demo-{DateTime.Now:yyyyMMdd}.log");
+                    Log.Logger = new LoggerConfiguration()
+                        .MinimumLevel.Information()
+                        .WriteTo.Console()
+                        .WriteTo.File(logFilePath, rollingInterval: RollingInterval.Day)
+                        .CreateLogger();
                 }
 
                 // Build host with dependency injection and logging
@@ -65,7 +65,7 @@ namespace Demo
                         services.Configure<ApplicationSettings>(configuration.GetSection("ApplicationSettings"));
                         services.Configure<OracleConnectionSettings>(configuration.GetSection("OracleConnection"));
                         services.Configure<BulkLoadSettings>(configuration.GetSection("BulkLoadSettings"));
-                        
+
                         // Register services
                         services.AddSingleton<IOracleConnectionService, OracleConnectionService>();
                         services.AddTransient<ICsvBulkLoadService, CsvBulkLoadService>();
@@ -90,6 +90,10 @@ namespace Demo
                 Console.WriteLine($"Application completed with exit code: {exitCode}");
                 Console.WriteLine($"Total execution time: {DateTime.UtcNow.Subtract(startTime).TotalSeconds:F2} seconds");
                 Console.WriteLine($"=================================");
+
+                // Wait for user input before closing
+                Console.WriteLine("\nPress any key to close...");
+                Console.ReadKey(true);
 
                 // Close and flush the log
                 Log.CloseAndFlush();
@@ -138,7 +142,7 @@ namespace Demo
                 _logger.LogInformation("Testing Oracle database connection");
 
                 var connectionStatus = await _oracleService.TestConnectionAsync();
-                
+
                 if (connectionStatus.IsConnected)
                 {
                     Console.WriteLine("✓ Oracle connection successful!");
@@ -184,12 +188,12 @@ namespace Demo
                 }
 
                 var processingResult = await _csvService.ProcessCsvFileAsync(csvFilePath);
-                
+
                 if (processingResult.Success)
                 {
                     Console.WriteLine($"✓ CSV processing completed successfully!");
                     Console.WriteLine($"  Records processed: {processingResult.RecordsProcessed}");
-                    _logger.LogInformation("CSV processing completed successfully. Records processed: {RecordsProcessed}", 
+                    _logger.LogInformation("CSV processing completed successfully. Records processed: {RecordsProcessed}",
                         processingResult.RecordsProcessed);
                 }
                 else

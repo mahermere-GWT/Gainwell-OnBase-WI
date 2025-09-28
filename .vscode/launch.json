@@ -2,6 +2,17 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": ".NET Core Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/bin/Debug/<target-framework>/<project-name.dll>",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        },
+        {
             "name": "bulkDURLoader (console)",
             "type": "coreclr",
             "request": "launch",
@@ -64,6 +75,72 @@
             "program": "${workspaceFolder}/SampleApp/bin/Debug/net9.0/SampleApp.dll",
             "args": [],
             "cwd": "${workspaceFolder}/SampleApp",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Demo App (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-demo",
+            "program": "${workspaceFolder}/demo/bin/Debug/net8.0/demo.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/demo",
+            "console": "externalTerminal",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Demo App (internal console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-demo",
+            "program": "${workspaceFolder}/demo/bin/Debug/net8.0/demo.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/demo",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Demo App .NET 9.0 (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-demo-net9",
+            "program": "${workspaceFolder}/demo/bin/Debug/net9.0/demo.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/demo",
+            "console": "externalTerminal",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Demo App .NET 6.0 (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-demo-net6",
+            "program": "${workspaceFolder}/demo/bin/Debug/net6.0/demo.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/demo",
+            "console": "externalTerminal",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Demo App .NET 6.0 (internal console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-demo-net6",
+            "program": "${workspaceFolder}/demo/bin/Debug/net6.0/demo.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/demo",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Demo App .NET 9.0 (internal console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-demo-net9",
+            "program": "${workspaceFolder}/demo/bin/Debug/net9.0/demo.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/demo",
             "console": "internalConsole",
             "stopAtEntry": false
         },
