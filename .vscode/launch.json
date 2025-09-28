@@ -145,6 +145,78 @@
             "stopAtEntry": false
         },
         {
+            "name": "FileProcessor .NET 6.0 (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-fileprocessor-net6",
+            "program": "${workspaceFolder}/FileProcessor/bin/Debug/net6.0/FileProcessor.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/FileProcessor",
+            "console": "externalTerminal",
+            "stopAtEntry": false,
+            "requireExactSource": true
+        },
+        {
+            "name": "FileProcessor .NET 6.0 (internal console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-fileprocessor-net6",
+            "program": "${workspaceFolder}/FileProcessor/bin/Debug/net6.0/FileProcessor.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/FileProcessor",
+            "console": "internalConsole",
+            "stopAtEntry": false,
+            "requireExactSource": true
+        },
+        {
+            "name": "FileProcessor .NET 8.0 (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-fileprocessor-net8",
+            "program": "${workspaceFolder}/FileProcessor/bin/Debug/net8.0/FileProcessor.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/FileProcessor",
+            "console": "externalTerminal",
+            "stopAtEntry": false,
+            "requireExactSource": true
+        },
+        {
+            "name": "FileProcessor .NET 8.0 (internal console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-fileprocessor-net8",
+            "program": "${workspaceFolder}/FileProcessor/bin/Debug/net8.0/FileProcessor.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/FileProcessor",
+            "console": "internalConsole",
+            "stopAtEntry": false,
+            "requireExactSource": true
+        },
+        {
+            "name": "FileProcessor .NET 9.0 (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-fileprocessor-net9",
+            "program": "${workspaceFolder}/FileProcessor/bin/Debug/net9.0/FileProcessor.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/FileProcessor",
+            "console": "externalTerminal",
+            "stopAtEntry": false,
+            "requireExactSource": true
+        },
+        {
+            "name": "FileProcessor .NET 9.0 (internal console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-fileprocessor-net9",
+            "program": "${workspaceFolder}/FileProcessor/bin/Debug/net9.0/FileProcessor.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/FileProcessor",
+            "console": "internalConsole",
+            "stopAtEntry": false,
+            "requireExactSource": true
+        },
+        {
             "name": ".NET Core Attach",
             "type": "coreclr",
             "request": "attach"

@@ -9,6 +9,10 @@
       "path": "./demo"
     },
     {
+      "name": "FileProcessor",
+      "path": "./FileProcessor"
+    },
+    {
       "name": "Workspace Root",
       "path": "."
     }

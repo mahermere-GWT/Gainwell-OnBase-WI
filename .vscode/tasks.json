@@ -84,6 +84,66 @@
 				"reveal": "silent"
 			},
 			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "build-fileprocessor-net6",
+			"type": "shell",
+			"command": "dotnet",
+			"args": [
+				"build",
+				"--framework",
+				"net6.0",
+				"--verbosity",
+				"quiet"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/FileProcessor"
+			},
+			"group": "build",
+			"presentation": {
+				"reveal": "silent"
+			},
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "build-fileprocessor-net8",
+			"type": "shell",
+			"command": "dotnet",
+			"args": [
+				"build",
+				"--framework",
+				"net8.0",
+				"--verbosity",
+				"quiet"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/FileProcessor"
+			},
+			"group": "build",
+			"presentation": {
+				"reveal": "silent"
+			},
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "build-fileprocessor-net9",
+			"type": "shell",
+			"command": "dotnet",
+			"args": [
+				"build",
+				"--framework",
+				"net9.0",
+				"--verbosity",
+				"quiet"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/FileProcessor"
+			},
+			"group": "build",
+			"presentation": {
+				"reveal": "silent"
+			},
+			"problemMatcher": "$msCompile"
 		}
 	]
 }
