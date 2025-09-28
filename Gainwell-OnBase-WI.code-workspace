@@ -13,6 +13,10 @@
       "path": "./FileProcessor"
     },
     {
+      "name": "FileConventionValidator",
+      "path": "./FileConventionValidator"
+    },
+    {
       "name": "Workspace Root",
       "path": "."
     }

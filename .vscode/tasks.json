@@ -144,6 +144,66 @@
 				"reveal": "silent"
 			},
 			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "build-fileconventionvalidator-net6",
+			"type": "shell",
+			"command": "dotnet",
+			"args": [
+				"build",
+				"--framework",
+				"net6.0",
+				"--verbosity",
+				"quiet"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/FileConventionValidator"
+			},
+			"group": "build",
+			"presentation": {
+				"reveal": "silent"
+			},
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "build-fileconventionvalidator-net8",
+			"type": "shell",
+			"command": "dotnet",
+			"args": [
+				"build",
+				"--framework",
+				"net8.0",
+				"--verbosity",
+				"quiet"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/FileConventionValidator"
+			},
+			"group": "build",
+			"presentation": {
+				"reveal": "silent"
+			},
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "build-fileconventionvalidator-net9",
+			"type": "shell",
+			"command": "dotnet",
+			"args": [
+				"build",
+				"--framework",
+				"net9.0",
+				"--verbosity",
+				"quiet"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/FileConventionValidator"
+			},
+			"group": "build",
+			"presentation": {
+				"reveal": "silent"
+			},
+			"problemMatcher": "$msCompile"
 		}
 	]
 }
