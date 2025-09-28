@@ -2,6 +2,29 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
+			"label": "build-demo",
+			"type": "shell",
+			"command": "dotnet",
+			"args": [
+				"build",
+				"--framework",
+				"net8.0",
+				"--verbosity",
+				"quiet"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/demo"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"presentation": {
+				"reveal": "silent"
+			},
+			"problemMatcher": "$msCompile"
+		},
+		{
 			"label": "Build and Run Demo",
 			"type": "shell",
 			"command": "dotnet",
@@ -13,11 +36,14 @@
 			"options": {
 				"cwd": "${workspaceFolder}/demo"
 			},
-			"isBackground": false,
-			"problemMatcher": [
-				"$tsc"
-			],
-			"group": "build"
+			"group": "build",
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared"
+			},
+			"problemMatcher": []
 		}
 	]
 }

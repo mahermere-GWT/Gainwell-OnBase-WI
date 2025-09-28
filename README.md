@@ -33,33 +33,30 @@ git clone https://github.com/mahermere-GWT/Gainwell-OnBase-WI.git
 cd Gainwell-OnBase-WI
 ```
 
-### 2. Open in VS Code
+### 2. Quick Setup
+For detailed setup instructions, see **[DEVELOPER_SETUP_GUIDE.md](DEVELOPER_SETUP_GUIDE.md)**
+
 ```bash
-code Gainwell-OnBase-Wi-Custom.code-workspace
+code Gainwell-OnBase-Wi-Custom.code-workspace  # Open in VS Code
+dotnet restore                                   # Install dependencies
+dotnet build                                     # Build solution
 ```
 
-### 3. Install Dependencies
-```bash
-dotnet restore
-```
-
-### 4. Configure Settings
-Edit `demo/appsettings.json` to configure:
-- Oracle connection string
-- CSV file path
-- Logging settings
-- Bulk load parameters
-
-### 5. Build the Application
-```bash
-dotnet build
-```
-
-### 6. Run the Demo
+### 3. Run the Demo
 ```bash
 cd demo
 dotnet run --framework net8.0
 ```
+
+### 4. Debug in VS Code
+1. Press `Ctrl+Shift+D` to open Run and Debug panel
+2. Select "Launch Demo" 
+3. Press `F5` to start debugging
+4. Use `F10` (step over) and `F11` (step into) to debug line-by-line
+
+📚 **New Developer?** Start with the **[DEVELOPER_SETUP_GUIDE.md](DEVELOPER_SETUP_GUIDE.md)** for complete setup instructions.
+
+🚀 **Quick Reference:** See **[DEBUG_QUICK_REFERENCE.md](DEBUG_QUICK_REFERENCE.md)** for debugging shortcuts and tips.
 
 ## Configuration
 
